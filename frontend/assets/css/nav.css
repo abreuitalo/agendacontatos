@@ -1,0 +1,28 @@
+nav {
+  width: 100%;
+  background: #0f7f3c;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  display: inline;
+  cursor: pointer;
+}
+
+li span {
+  font-size: 25px;
+  color: #ffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 10px;
+}

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda</title>
+  </head>
+  <body>
+    <nav class="nav-home">
+      <ul>
+        <li class="titulo"><span href="#">Cadastro Online</span></li>
+      </ul>
+    </nav>
+    <div class="titulo-contatos">
+      <h2>Contatos</h2>
+    </div>
+    <section>
+
+      <div class="modal">
+        <div class="content">
+          <form method="post" action="/contato/register" class="form-cadastro">
+            <label for="nome" style=" color: #00ee5f;">Nome</label>
+            <input type="text" placeholder="Italo Abreu" name="nome">
+            <label for="cidade" style=" color: #00ee5f;">Cidade</label>
+            <input type="text" placeholder="Goiânia" name="cidade">
+            <label for="estados" style=" color: #00ee5f;">Estado</label>
+            <select name="estado" id="estados">
+              <option value="">Escolha um estado</option>
+              <option value="Distrito Federal">DF (Distrito Federal)</option>
+              <option value="Goiás">GO (Goiás)</option>
+              <option value="Mato Grosso">MT (Mato Grosso)</option>
+              <option value="Mato Grosso do Sul">MS (Mato Grosso do Sul)</option>
+              <option value="Alagoas">AL (Alagoas)</option>
+              <option value="Ceará">CE (Ceará)</option>
+              <option value="Bahia">BA (Bahia)</option>
+              <option value="Maranhão">MA (Maranhão)</option>
+              <option value="Paraíba">PR (Paraíba)</option>
+              <option value="Pernambuco">PE (Pernambuco)</option>
+              <option value="Piauí">PI (Piauí)</option>
+              <option value="Rio Grande do Norte">RN (Rio Grande do Norte)</option>
+              <option value="Sergipe">SE (Sergipe)</option>
+              <option value="Acre">AC (Acre)</option>
+              <option value="Amapá">AP (Amapá)</option>
+              <option value="Amazonas">AM (Amazonas)</option>
+              <option value="Pará">PA (Pará)</option>
+              <option value="Rondônia">RO (Rondônia)</option>
+              <option value="Roraima">RR (Roraima)</option>
+              <option value="Tocantis">TO (Tocantis)</option>
+              <option value="Espírito Santo">ES (Espírito Santo)</option>
+              <option value="Minas Gerais">MG (Minas Gerais)</option>
+              <option value="Rio de Janeiro">RJ (Rio de Janeiro)</option>
+              <option value="São Paulo">SP (São Paulo)</option>
+              <option value="Paraná">PR (Paraná)</option>
+              <option value="Rio Grande do Sul">RS (Rio Grande do Sul)</option>
+              <option value="Santa Catarina">SC (Santa Catarina)</option>
+            </select>
+            <label for="telefone" style=" color: #00ee5f;">Telefone</label>
+            <input type="tel" placeholder="(xx) xxxxx-xxxx" name="telefone">
+            <label for="email" style=" color: #00ee5f;">E-mail</label>
+            <input type="email" placeholder="email@email.com" name="email">
+
+            <div class="box-btn">
+              <button class="btn-fechar">Fechar</button>
+              <button class="btn-cadastrar">Cadastrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="box-head">
+        <button class="adicionar">Adicionar</button>
+        <button class="imprimir">Imprimir</button>
+        <button>Filtrar</button>
+      </div>
+
+      <div class="container">
+        <% if (contatos.length > 0) { %>
+          <div class="responsive-table">
+            <table class="table my-3">
+            <thead>
+              <tr>
+                <td><b>Nome</b></td>
+                <td><b>Cidade</b></td>
+                <td><b>Estado</b></td>
+                <td><b>Telefone</b></td>
+                <td><b>E-mail</b></td>
+              </tr>
+            </thead>
+              <% contatos.forEach(contato => { %>
+                <tr> <!--linha-->
+                  <td><%= contato.nome %></td> <!--colunas-->
+                  <td><%= contato.cidade %></td> <!--colunas-->
+                  <td><%= contato.estado %></td> <!--colunas-->
+                  <td><%= contato.telefone %></td> <!--colunas-->
+                  <td><%= contato.email %></td> <!--colunas-->
+                  <td class="btn-delete"><a  href="/contato/delete/<%= contato._id %>"><i class="fa-solid fa-trash"></i></a></td>
+                </tr>
+              <% }) %>
+            </table>
+          </div>
+          <% } else { %>
+            <p class="text-center lead">Não existem contatos em sua agenda</p>
+          <% } %>
+
+      </div>
+
+
+    </section>
+    <script src="/assets/js/bundle.js"></script>
+    <script src="https://kit.fontawesome.com/777e74af89.js" crossorigin="anonymous"></script>
+  </body>
+</html>

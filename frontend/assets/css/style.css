@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #fefefe;
+  margin: 0;
+}
+
+.titulo-contatos {
+  margin: 0;
+  height: 58px;
+  background: #fefefe;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 5px 1px #888888;
+  margin-bottom: 50px;
+}
+
+.titulo-contatos h2 {
+  color: #000;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+section {
+  background: #fefefe;
+}
+
+.box-head {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  padding-right: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.box-head button {
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #0f7f3c;
+  color: #fefefe;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px 1px rgb(0, 0, 0, 0.6);
+}
+.box-head button:hover {
+  background-color: #34c36d;
+  transition: 0.3s all ease-in-out;
+  font-weight: 600;
+}
+
+.container {
+  margin: 20px 20px;
+  padding: 20px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px 0 rgb(0, 0, 0, 0.6);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.colunas-contatos tr th {
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  height: 2em;
+  font-size: 17px;
+  color: #1a3212;
+  text-align: center;
+}
+
+td {
+  font-size: 17px;
+  padding: 10px 0;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  margin: 0;
+}
+
+thead tr td {
+  background: #0f7f3c;
+  color: #fff;
+}
+
+.btn-edit,
+.btn-delete {
+  display: inline-flexbox;
+  border: none;
+}
+
+.btn-edit a {
+  color: #1970ce;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-delete a {
+  color: #f0514d;
+  text-decoration: none;
+  border: none;
+}
