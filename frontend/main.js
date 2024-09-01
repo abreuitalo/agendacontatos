@@ -15,6 +15,8 @@ const switchModal = () => {
     modal.style.display = 'none';
   });
 
+  return;
+
   // if (actualStyle == 'block') {
   //   modal.style.display = 'none';
   // } else {
@@ -32,21 +34,3 @@ window.onclick = function (event) {
   }
 };
 
-// imprimir
-const btnImprimir = document.querySelector('.imprimir');
-btnImprimir.addEventListener('click', (e) => {
-  e.preventDefault();
-  const contatos = document.querySelector('.container').innerHTML;
-  document.querySelector('.box-head').style.visibility = 'hidden';
-  document.querySelector('.titulo').style.visibility = 'hidden';
-  window.print();
-  document.querySelector('.box-head').style.visibility = 'visible';
-  document.querySelector('.titulo').style.visibility = 'visible';
-});
-
-// ------- editar contato
-
-const btnEdit = document.querySelector('.btn-edit');
-window.document
-  .querySelector('.btn-edit')
-  .addEventListener('click', switchModal);

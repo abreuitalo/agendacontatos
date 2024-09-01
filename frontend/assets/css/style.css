@@ -45,15 +45,15 @@ section {
   border: none;
   padding: 10px 15px;
   cursor: pointer;
-  background-color: #0f7f3c;
+  background-color: #4a148c;
   color: #fefefe;
   font-weight: 600;
   border-radius: 10px;
   box-shadow: 1px 1px 6px 1px rgb(0, 0, 0, 0.6);
 }
 .box-head button:hover {
-  background-color: #34c36d;
-  transition: 0.3s all ease-in-out;
+  background-color: #18072d;
+  transition: 0.5s all ease-in-out;
   font-weight: 600;
 }
 
@@ -70,7 +70,7 @@ section {
   border: 1px solid rgb(0, 0, 0, 0.2);
   height: 2em;
   font-size: 17px;
-  color: #1a3212;
+  color: #4a148c;
   text-align: center;
 }
 
@@ -88,7 +88,7 @@ td {
 }
 
 thead tr td {
-  background: #0f7f3c;
+  background: #4a148c;
   color: #fff;
 }
 
@@ -108,4 +108,20 @@ thead tr td {
   color: #f0514d;
   text-decoration: none;
   border: none;
+}
+
+.btn-delete:hover {
+  background: #4a148c;
+  cursor: pointer;
+  color: #ffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+}
+
+p.sem-contatos {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
 }

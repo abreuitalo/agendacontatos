@@ -12,7 +12,7 @@
       </ul>
     </nav>
     <div class="titulo-contatos">
-      <h2>Contatos</h2>
+      <h2 id="title-contatos">Contatos</h2>
     </div>
     <section>
 
@@ -69,8 +69,6 @@
 
       <div class="box-head">
         <button class="adicionar">Adicionar</button>
-        <button class="imprimir">Imprimir</button>
-        <button>Filtrar</button>
       </div>
 
       <div class="container">
@@ -99,7 +97,18 @@
             </table>
           </div>
           <% } else { %>
-            <p class="text-center lead">Não existem contatos em sua agenda</p>
+            <table class="table my-3">
+            <thead>
+              <tr>
+                <td><b>Nome</b></td>
+                <td><b>Cidade</b></td>
+                <td><b>Estado</b></td>
+                <td><b>Telefone</b></td>
+                <td><b>E-mail</b></td>
+              </tr>
+            </thead>
+          </table>
+            <p class="text-center lead sem-contatos">Não existem contatos em sua agenda</p>
           <% } %>
 
       </div>
